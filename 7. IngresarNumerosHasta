@@ -1,0 +1,13 @@
+// Hacer un algoritmo que permita ingresar numeros, e imprimirlos, hasta que el numero sea 999 y ahi termina el proceso.
+
+Proceso IngresarNumerosHasta
+	
+	Definir NumIngresado Como Entero
+	
+	Repetir
+		Escribir "Por favor ingrese un número (Al ingresar 999 termina el proceso): "
+		Leer NumIngresado
+		Escribir NumIngresado
+	Hasta Que NumIngresado == 999
+
+FinProceso

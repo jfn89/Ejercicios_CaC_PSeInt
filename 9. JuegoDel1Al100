@@ -1,0 +1,145 @@
+// Hacer un algoritmo en el que ud juegue contra la maquina.
+// Ud tiene que adivinar un numero de 1 a 100 que eligirá al azar la maquina, tendra solo 5 chances.
+// La máquina debe guiarlos con es mayor o es menor que el que eligió, o bien decir, Ud ha ganado. 
+
+//Proceso JuegoAdivinaNumero
+//	
+//	Definir NumeroMaquina, NumeroUsuario, Contador Como Entero
+//	
+//	Escribir "Adivina el número"
+//	Escribir " "
+//	Escribir "Tenés 5 intentos para adivinar el número."
+//	Escribir " "
+//	NumeroMaquina <- Aleatorio(1,100)
+//	NumeroUsuario <- 0
+//	Escribir NumeroMaquina
+//	
+//	contador <- 1
+//	
+//	Mientras (contador <= 5) Y (NumeroUsuario <> NumeroMaquina) Hacer
+//		Escribir "Ingresa un número del 1 al 100: "
+//		Leer NumeroUsuario
+//		si NumeroUsuario > NumeroMaquina Entonces
+//			Escribir "El número que ingresaste es mayor."
+//		SiNo
+//			Si NumeroUsuario < NumeroMaquina Entonces
+//				Escribir "El número que ingresaste es menor."
+//			FinSi
+//		FinSi
+//		contador <- contador + 1
+//	FinMientras
+//	
+//	Si NumeroUsuario = NumeroMaquina Entonces
+//		Escribir "Ganaste Campeón/a!!!!!"
+//	SiNo
+//		Escribir "Mejor suerte la próxima vez, el número era ", NumeroMaquina, "." 
+//	FinSi
+//	
+//	
+//FinProceso
+
+// Dificil: Hacer lo mismo pero con el repetir
+
+//Proceso JuegoDel1Al100Repetir 
+//	Definir NumeroMaquina, NumeroUsuario, Contador Como Entero
+//	
+//	Escribir "Adivina el número"
+//	Escribir " "
+//	Escribir "Tenés 5 intentos para adivinar el número."
+//	Escribir " "
+//	NumeroMaquina <- Aleatorio(1,100)
+//	NumeroUsuario <- 0
+//	Escribir NumeroMaquina
+//	
+//	contador <- 1
+//	Repetir
+//		Escribir "Ingresa un número del 1 al 100: "
+//		Leer NumeroUsuario
+//		si NumeroUsuario > NumeroMaquina Entonces
+//			Escribir "El número que ingresaste es mayor."
+//		SiNo
+//			Si NumeroUsuario < NumeroMaquina Entonces
+//				Escribir "El número que ingresaste es menor."
+//			FinSi
+//		FinSi
+//		contador <- contador + 1
+//	Hasta Que No (contador <= 5 Y NumeroUsuario <> NumeroMaquina)
+//	
+//	Si NumeroUsuario = NumeroMaquina Entonces
+//		Escribir "Ganaste Campeón/a!!!!!"
+//	SiNo
+//		Escribir "Mejor suerte la próxima vez, el número era ", NumeroMaquina, "." 
+//	FinSi
+//	
+//FinProceso
+
+// Ultradificil: Que pasa si queremos competir contra la maquina, a ver quien gana mas partidos en 3.
+
+Proceso JuegoDel1Al100Repetir 
+	Definir NumeroMaquina, NumeroUsuario, Contador, Partida, GanoUsuario, GanoMaquina, NumeroSecreto, ContadorMaquina Como Entero
+	
+	Escribir "Adivina el número"
+	Escribir " "
+	Escribir "Tenés 5 intentos para adivinar el número."
+	Escribir " "
+
+	Contador <- 1
+	ContadorMaquina <- 1
+	Partida <- 1
+	GanoUsuario <- 0
+	GanoMaquina <- 0
+	
+	Mientras Partida <= 3 Hacer
+		NumeroSecreto <- Aleatorio(1,100)
+		NumeroUsuario <- 0
+		Repetir
+			Escribir "Ingresa un número del 1 al 100: "
+			Leer NumeroUsuario
+			si NumeroUsuario > NumeroSecreto Entonces
+				Escribir "El número que ingresaste es mayor."
+			SiNo
+				Si NumeroUsuario < NumeroSecreto Entonces
+					Escribir "El número que ingresaste es menor."
+				FinSi
+			FinSi
+			Contador <- Contador + 1
+		Hasta Que No (Contador <= 5 Y NumeroUsuario <> NumeroSecreto)
+		
+		Si NumeroUsuario = NumeroSecreto Entonces
+			Escribir "Ganaste Campeón/a!!!!!"
+			GanoUsuario <- GanoUsuario + 1
+		SiNo
+			Escribir "Mejor suerte la próxima vez, el número era ", NumeroSecreto, "." 
+		FinSi
+		Partida <- Partida + 1
+		Contador <- 1
+	FinMientras
+	
+	Mientras Partida <= 3 Hacer
+		NumeroSecreto <- Aleatorio(1,100)
+		NumeroMaquina <- 0
+		Repetir
+			NumeroMaquina <- Aleatorio(1,100)
+			si NumeroMaquina <> NumeroSecreto Entonces
+				ContadorMaquina<- ContadorMaquina + 1
+			SiNo
+				GanoMaquina <- GanoMaquina + 1 
+			FinSi
+		Hasta Que No (ContadorMaquina <= 5 Y NumeroMaquina <> NumeroSecreto)
+		Partida <- Partida + 1
+		ContadorMaquina <- 1
+	FinMientras
+	
+	Si GanoUsuario > GanoMaquina Entonces
+		Escribir "Felicidades! Me ganaste por ", GanoUsuario, " a ", GanoMaquina, "."
+	SiNo
+		Si GanoUsuario < GanoMaquina Entonces
+			Escribir "Mejor suerte la próxima vez!, te gané por ", GanoMaquina, " a ", GanoUsuario, "."
+		SiNo
+			Escribir "Esta vez empatamos."
+		FinSi
+	FinSi
+	
+	
+FinProceso
+

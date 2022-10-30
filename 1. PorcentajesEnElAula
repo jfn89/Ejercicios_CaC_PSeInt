@@ -1,0 +1,26 @@
+// Hacer un algoritmo que reciba la cantidad de hombres y la cantidad de mujeres que hay en un curso. 
+// Obtener el total de alumnos, el porcentaje de hombres y el porcentaje de mujeres, y mostrarlo por pantalla. 
+
+Proceso PorcentajesEnElAula
+	//Definir variables
+	Definir Alumnos Como Entero
+	Definir Alumnas Como Entero
+	Definir TotalEstudiantes Como Entero
+	Definir PorcentajeAlumnos Como Real
+	Definir PorcentajeAlumnas Como Real
+	
+	//Ingresar datos
+	Escribir "¿Cuántos hombres hay en la clase?"
+	Leer Alumnos
+	Escribir "¿Cuántas mujeres hay en la clase?"
+	Leer Alumnas
+	
+	//Procesamiento y salida
+	TotalEstudiantes <- Alumnos + Alumnas
+	Escribir "En la clase hay ", TotalEstudiantes, " estudiantes."
+	PorcentajeAlumnos <- (Alumnos * 100) / TotalEstudiantes
+	Escribir "El ", PorcentajeAlumnos, "% son Hombres."
+	PorcentajeAlumnas <- (Alumnas * 100) / TotalEstudiantes
+	Escribir "El ", PorcentajeAlumnas, "% son Mujeres."
+	
+FinProceso

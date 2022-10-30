@@ -1,0 +1,58 @@
+Proceso PiedraPapeloTijera
+	//Define variables
+	Definir num1, num2,suma1, suma2 Como Entero
+	Definir band Como Logico
+	suma1=0
+	suma2=0
+	Escribir "Juego de Piedra papel o tijeras contra la PC"
+	Escribir "Para jugar ingrese los numeros del 1 al 3"
+	
+	Repetir
+		
+		//	Validar el ingreso	
+		Repetir
+			Escribir "Elija 1. piedra, 2. papel, 3. tijera"
+			Leer num1
+		Hasta Que num1 = 1 o num1 = 2 o num1 = 3
+		//Ingreso máquina
+		num2= Aleatorio(1,3)
+		//Describe que ingrso el usuario y la máquina
+		Segun num1 Hacer
+			1:
+				Escribir "Elejiste piedra"
+			2:
+				Escribir "Elejiste papel"
+			De Otro Modo:
+				Escribir "Elejiste tijeras"
+		FinSegun
+		Segun num2 Hacer
+			1:
+				Escribir "Tu rival elijió piedra"
+			2:
+				Escribir "Tu rival elijió papel"
+			De Otro Modo:
+				Escribir "Tu rival elijió tijeras"
+		FinSegun
+		//Compara las elecciones
+		Si num1=num2 Entonces
+			Escribir "Hay empate, siguen ", suma1, " vs ", suma2
+		SiNo
+			si (num1=1 y num2=3) o (num1=2 y num2=1) o (num1=3 y num2=2) Entonces
+				suma1=suma1+1 
+				Escribir "Ganaste!, vas ", suma1, " vs ", suma2
+			SiNo
+				suma2=suma2+1
+				Escribir "Perdiste!, vas ", suma1, " vs ", suma2
+			FinSi
+		FinSi
+	Hasta Que suma1=3 o suma2=3
+	// Informa quien gano
+	Escribir " "
+	Si suma1=3 Entonces
+		Escribir "Ganaste!!!!, con un total de ", suma1, " vs ", suma2
+	SiNo
+		Escribir "Perdiste... con un total de ", suma1, " vs ", suma2
+	FinSi
+
+	
+FinProceso

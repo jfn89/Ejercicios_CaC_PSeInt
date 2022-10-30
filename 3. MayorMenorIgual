@@ -1,0 +1,25 @@
+// Hacer un Algoritmo en el que el usuario ingrese dos números, y el algoritmo debe mostrar por pantalla
+// si el primero número es mayor que el segundo, o si el segundo número es mayor que el primero, 
+// o bien si son iguales
+
+Proceso MayorMenorIgual
+	
+	Definir Num1 Como Entero
+	Definir Num2 Como Entero
+	
+	Escribir "Ingrese un número: "
+	Leer Num1
+	Escribir "Ingrese otro número: "
+	Leer Num2
+	
+	Si Num1 > Num2 Entonces
+		Escribir "El primer número ingresado es mayor al segundo."
+	SiNo
+		Si Num1 < Num2 Entonces
+			Escribir "El primer número es menor al segundo."
+		SiNo
+			Escribir "Los números ingresados son iguales."
+		FinSi
+	FinSi
+	
+FinProceso

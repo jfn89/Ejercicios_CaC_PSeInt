@@ -1,0 +1,19 @@
+// Hacer un algoritmo que obtenga los número 
+// pares del 1 al 100 usando la instruccion mod
+// Para realizar no obligatorio
+
+Proceso Del1Al100ParesConMientras
+	
+	Definir contador Como Entero
+	
+	contador <- 1;
+	
+	Mientras contador <= 100 Hacer
+		si contador mod 2 = 0 entonces
+			Escribir contador
+		FinSi
+	contador <- contador + 1 
+	FinMientras
+	
+	
+FinProceso

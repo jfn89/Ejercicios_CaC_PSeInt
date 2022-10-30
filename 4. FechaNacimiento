@@ -1,0 +1,52 @@
+// Crea un algoritmo que reciba como datos de entrada (ingresado por el ususario),
+// el nombre,dia de nacimiento(numero) y el numero del mes. Y debe mostrar por pantalla,
+// en el supuesto que el usuario ingrese Juan Perez(nombre), 5(numero de dia del mes) y 
+// 7 (numero del mes)
+// El algoritmo deberia devolver el texto como el siguiente:
+// Ud, Juan Perez, ha nacido el dia 5 de Julio
+
+Proceso FechaNacimiento
+	
+	Definir Nombre Como Caracter
+	Definir DiaNacimiento Como Entero
+	Definir MesNacimiento Como Entero
+	
+	Escribir "Ingrese su nombre: "
+	Leer Nombre
+	
+	Escribir "Ingrese su día de nacimiento (en números): "
+	Leer DiaNacimiento
+	
+	Escribir "Ingrese su mes de nacimiento (en números): "
+	Leer MesNacimiento
+	
+	Segun MesNacimiento Hacer
+		1:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Enero." 
+		2:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Febrero."
+		3:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Marzo."
+		4:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Abril."
+		5:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Mayo."
+		6:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Junio."
+		7:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Julio." 
+		8:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Agosto."
+		9:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Septiembre."
+		10:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Octubre."
+		11:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Noviembre."
+		12:
+			Escribir "Ud, ", Nombre, " ha nacido el día ", DiaNacimiento, " de Diciembre."
+		De Otro Modo:
+			Escribir "Error en los datos ingresados."
+	FinSegun
+	
+FinProceso
